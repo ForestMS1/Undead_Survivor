@@ -283,7 +283,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Stand_2
+      name: Stand_1
       rect:
         serializedVersion: 2
         x: 19
@@ -304,7 +304,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Stand_3
+      name: Stand_2
       rect:
         serializedVersion: 2
         x: 38
@@ -325,7 +325,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Stand_4
+      name: Stand_3
       rect:
         serializedVersion: 2
         x: 0
@@ -407,9 +407,9 @@ TextureImporter:
       Run_4: -2044827493
       Run_5: -2114117010
       Stand_0: 253401415
-      Stand_2: 1038943322
-      Stand_3: 489551312
-      Stand_4: -366453249
+      Stand_1: 1038943322
+      Stand_2: 489551312
+      Stand_3: -366453249
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

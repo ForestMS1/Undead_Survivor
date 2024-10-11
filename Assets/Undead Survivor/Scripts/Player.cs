@@ -10,12 +10,14 @@ public class Player : MonoBehaviour
     Rigidbody2D rigid;
     public float speed;
     SpriteRenderer spriter;
+    Animator anim;
 
 
     void Awake()
     {
         rigid = GetComponent<Rigidbody2D>();
         spriter = GetComponent<SpriteRenderer>();
+        anim = GetComponent<Animator>();
     }
 
     //물리 연산 프레임마다 호출되는 생명주기 함수
@@ -34,6 +36,7 @@ public class Player : MonoBehaviour
     //프레임이 종료 되기 전 실행되는 생명주기 함수
     void LateUpdate()
     {
+        anim.SetFloat("Speed", inputVec.magnitude);
         if(inputVec.x != 0)
         {
             spriter.flipX = inputVec.x < 0;
