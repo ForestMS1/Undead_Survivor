@@ -21,7 +21,7 @@ public class Spawner : MonoBehaviour
         level = Mathf.FloorToInt(GameManager.instance.gameTime / 10f);
 
 
-        if(timer > (level == 0 ? 0.5f : 0.2f))
+        if(timer > spawnData[level].spawnTime)
         {
             timer = 0;
             Spawn();
@@ -31,8 +31,9 @@ public class Spawner : MonoBehaviour
 
     void Spawn()
     {
-       GameObject enemy =  GameManager.instance.pool.Get(level);
+       GameObject enemy =  GameManager.instance.pool.Get(0);
         enemy.transform.position = spawnPoint[Random.Range(1, spawnPoint.Length)].position; //spawn오브젝트는 제외하도록 1부터시작
+        enemy.GetComponent<Enemy>().Init(spawnData[level]);
     }
 }
 
