@@ -18,7 +18,7 @@ public class Spawner : MonoBehaviour
     void Update()
     {
         timer += Time.deltaTime; //한 프레임이 소비한 시간
-        level = Mathf.FloorToInt(GameManager.instance.gameTime / 10f);
+        level = Mathf.Min(Mathf.FloorToInt(GameManager.instance.gameTime / 10f), spawnData.Length-1);
 
 
         if(timer > spawnData[level].spawnTime)
